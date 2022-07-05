@@ -3,6 +3,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set nu
+set relativenumber
 set hidden
 set noerrorbells
 set noswapfile
