@@ -17,7 +17,7 @@ set colorcolumn=80
 set signcolumn=yes
 set encoding=utf-8
 set spell
-syntax on set title
+set title
 set nohlsearch
 set splitbelow
 set splitright
@@ -53,12 +53,12 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'junegunn/vim-easy-align'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-" Multiple Plug commands can be written in a single line using | separators
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " On-demand loading
+" Multiple Plug commands can be written in a single line using | separators Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " On-demand loading
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 call plug#end()
 
 let g:SimpylFold_docstring_preview=1
+let g:python_highlight_space_errors = 0
 
 colorscheme gruvbox
 highlight Normal guibg=none
