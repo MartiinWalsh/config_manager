@@ -98,14 +98,25 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
+alias zshconfig="code ~/.zshrc"
+alias src="source ~/.zshrc"
+
+alias dev="cd ~/Documents/dev/"
+
+alias gr='grep'
+alias gh='history|grep'
+alias cl="clear"
+# get rid of command not found 
+alias cd..='cd ..'
+# a quick way to get out of current directory
+alias ..="cd .."
+alias ...="cd ../../../"
+alias ....="cd ../../../../"
+alias .....="cd ../../../../"
+alias .4="cd ../../../../"
+alias .5="cd ../../../../.."
+
 alias python="python3"
 alias pip="pip3"
 
@@ -133,3 +144,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+eval "$(rbenv init - zsh)"
