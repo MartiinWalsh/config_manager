@@ -2,21 +2,24 @@
 # THEME SETUP
 ##############
 
+# Powerlevel10k instant prompt preamble
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Load Zsh and Oh-My-Zsh
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 
-source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+# Load Powerlevel10k theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# Load additional plugins
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+# Key bindings for history substring search
 bindkey '^[OA' history-substring-search-up
 bindkey '^[OB' history-substring-search-down
 
@@ -31,11 +34,11 @@ SAVEHIST=50000
 setopt EXTENDED_HISTORY
 setopt HIST_VERIFY
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
-setopt HIST_IGNORE_DUPS          # Dont record an entry that was just recorded again.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
 setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
-setopt HIST_IGNORE_SPACE         # Dont record an entry starting with a space.
-setopt HIST_SAVE_NO_DUPS         # Dont write duplicate entries in the history file.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 
 setopt inc_append_history
 setopt share_history
@@ -65,7 +68,6 @@ setopt always_to_end
 setopt auto_pushd
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-
 
 typeset -U PATH
 autoload colors; colors;
